@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONZUR ROHOMAN – Technical Services Dubai</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0b1329',
+                            light: '#131e3a',
+                            dark: '#060a17'
+                        },
+                        brandRed: {
+                            DEFAULT: '#dc2626',
+                            hover: '#b91c1c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS for Sliders -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Image Hover Zoom Animation */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Swiper Custom Pagination & Navigation */
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffffff !important;
+            background: rgba(11, 19, 41, 0.7);
+            width: 48px !important;
+            height: 48px !important;
+            border-radius: 50%;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 18px !important;
+            font-weight: bold;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: #dc2626 !important;
+            border-color: #dc2626;
+            transform: scale(1.1);
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #dc2626 !important;
+            width: 24px !important;
+            border-radius: 9999px !important;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b1329;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-gray-50 text-gray-800 flex flex-col min-h-screen relative">
+
+    <!-- 1. TOP CONTACT BAR -->
+    <div class="bg-navy text-white text-xs md:text-sm py-2.5 px-4 border-b border-gray-800/80 sticky top-0 z-50 sm:relative">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <a href="mailto:monzur.rohoman@gmail.com" class="flex items-center gap-2 hover:text-red-400 transition font-medium">
+                    <i class="fa-regular fa-envelope text-red-500 font-bold"></i> 
+                    <span>monzur.rohoman@gmail.com</span>
+                </a>
+                <span class="hidden sm:flex items-center gap-2 text-gray-300">
+                    <i class="fa-solid fa-location-dot text-red-500"></i> Deira, Dubai, United Arab Emirates
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-400 hidden md:inline font-medium">Call Us:</span>
+                <a href="tel:+971551031844" class="font-bold text-red-500 text-xs md:text-sm hover:text-white transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone"></i> +971 55 103 1844
+                </a>
+                <a href="tel:+971568259776" class="font-bold text-red-500 text-xs md:text-sm hover:text-white transition hidden lg:flex items-center gap-1">
+                    <i class="fa-solid fa-mobile-screen"></i> +971 56 825 9776
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. STICKY NAVBAR -->
+    <nav class="bg-navy/95 backdrop-blur-md sticky top-0 z-40 shadow-2xl border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="bg-white px-3 py-2 rounded-xl shadow-md flex items-center gap-3 border border-gray-100 group-hover:border-red-500 transition">
+                    <div class="bg-navy text-white w-10 h-10 rounded-lg flex items-center justify-center font-black text-lg border-2 border-red-600 shadow-inner">
+                        MR
+                    </div>
+                    <div>
+                        <span class="font-black text-base md:text-lg tracking-tight text-navy block leading-none">MONZUR ROHOMAN</span>
+                        <span class="block text-[9px] font-extrabold tracking-widest text-red-600 uppercase mt-0.5">TECHNICAL SERVICES</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Nav Links (Desktop) -->
+            <div class="hidden md:flex items-center space-x-8 text-white text-sm font-semibold">
+                <a href="#home" class="hover:text-red-500 transition-colors duration-200">Home</a>
+                <a href="#about" class="hover:text-red-500 transition-colors duration-200">About Us</a>
+                <a href="#services" class="hover:text-red-500 transition-colors duration-200">Our Services</a>
+                <a href="#products" class="hover:text-red-500 transition-colors duration-200">Products</a>
+                <a href="#contact-card" class="hover:text-red-500 transition-colors duration-200">Contact</a>
+            </div>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/971551031844" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white font-bold px-4 md:px-5 py-2.5 rounded-xl text-xs md:text-sm transition-all shadow-lg hover:shadow-red-600/30 flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base md:text-lg"></i> 
+                    <span class="hidden sm:inline">Quick Inquiry</span>
+                    <span class="sm:hidden">WhatsApp</span>
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-red-500 text-2xl focus:outline-none p-2 rounded-lg bg-navy-light" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-light border-b border-gray-800 px-6 py-4 space-y-3">
+            <a href="#home" class="mobile-link block text-white font-medium hover:text-red-500 py-2 border-b border-gray-800">Home</a>
+            <a href="#about" class="mobile-link block text-white font-medium hover:text-red-500 py-2 border-b border-gray-800">About Us</a>
+            <a href="#services" class="mobile-link block text-white font-medium hover:text-red-500 py-2 border-b border-gray-800">Our Services</a>
+            <a href="#products" class="mobile-link block text-white font-medium hover:text-red-500 py-2 border-b border-gray-800">Products & Spares</a>
+            <a href="#contact-card" class="mobile-link block text-white font-medium hover:text-red-500 py-2">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- 3. HERO AUTO-PLAY SLIDER -->
+    <section id="home" class="relative bg-navy overflow-hidden">
+        <div class="swiper heroSwiper min-h-[580px] md:min-h-[640px]">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1 -->
+                <div class="swiper-slide relative flex items-center py-24 px-4">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=80');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-transparent"></div>
+                    <div class="relative max-w-7xl mx-auto w-full text-white">
+                        <div class="max-w-2xl">
+                            <span class="inline-block bg-red-600 text-white font-extrabold text-xs uppercase px-3.5 py-1.5 rounded-full tracking-widest shadow-md mb-4">
+                                MONZUR ROHOMAN TECHNICAL SERVICES
+                            </span>
+                            <h1 class="text-3xl sm:text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                                Commercial Kitchen Equipment Supply & Maintenance
+                            </h1>
+                            <p class="text-gray-300 mt-5 text-sm md:text-lg leading-relaxed font-normal">
+                                Custom design solutions for commercial kitchens, cold rooms, heavy-duty stainless steel fabrication, and emergency MEP technical support in Dubai, UAE.
+                            </p>
+                            <div class="mt-8 flex flex-wrap gap-4">
+                                <a href="#services" class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl hover:shadow-red-600/40 transition text-sm flex items-center gap-2">
+                                    <span>Explore Services</span>
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </a>
+                                <a href="#contact-card" class="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white hover:text-navy text-white font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide relative flex items-center py-24 px-4">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-transparent"></div>
+                    <div class="relative max-w-7xl mx-auto w-full text-white">
+                        <div class="max-w-2xl">
+                            <span class="inline-block bg-red-600 text-white font-extrabold text-xs uppercase px-3.5 py-1.5 rounded-full tracking-widest shadow-md mb-4">
+                                DEIRA, DUBAI, UNITED ARAB EMIRATES
+                            </span>
+                            <h1 class="text-3xl sm:text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                                Cold Room Installation & Repair Solutions
+                            </h1>
+                            <p class="text-gray-300 mt-5 text-sm md:text-lg leading-relaxed font-normal">
+                                Optimal temperature control, spare parts supply, compressor overhaul, and heavy-duty refrigeration systems for hotels, supermarkets, and commercial restaurants.
+                            </p>
+                            <div class="mt-8 flex flex-wrap gap-4">
+                                <a href="#about" class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl hover:shadow-red-600/40 transition text-sm">
+                                    Meet the Founder
+                                </a>
+                                <a href="#contact-card" class="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white hover:text-navy text-white font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm">
+                                    View Visiting Card
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide relative flex items-center py-24 px-4">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-transparent"></div>
+                    <div class="relative max-w-7xl mx-auto w-full text-white">
+                        <div class="max-w-2xl">
+                            <span class="inline-block bg-red-600 text-white font-extrabold text-xs uppercase px-3.5 py-1.5 rounded-full tracking-widest shadow-md mb-4">
+                                PRECISION ENGINEERING
+                            </span>
+                            <h1 class="text-3xl sm:text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                                Custom Stainless Steel Fabrication & MEP
+                            </h1>
+                            <p class="text-gray-300 mt-5 text-sm md:text-lg leading-relaxed font-normal">
+                                Bespoke stainless steel counters, exhaust hoods, sinks, and certified MEP drawings with municipal approval support across all UAE emirates.
+                            </p>
+                            <div class="mt-8 flex flex-wrap gap-4">
+                                <a href="#products" class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl hover:shadow-red-600/40 transition text-sm">
+                                    Browse Products
+                                </a>
+                                <a href="https://wa.me/971551031844" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-base"></i> Immediate Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Slider Navigation Controls -->
+            <div class="swiper-button-next hidden sm:flex"></div>
+            <div class="swiper-button-prev hidden sm:flex"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- 4. ABOUT COMPANY & FOUNDER SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Founder & CEO Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8 shadow-2xl relative w-full max-w-md text-center transform hover:-translate-y-1 transition duration-300">
+                        <div class="absolute -top-3 right-6 bg-red-600 text-white text-[11px] font-black uppercase px-4 py-1.5 rounded-full shadow-lg tracking-wider">
+                            Founder & CEO
+                        </div>
+                        
+                        <div class="relative w-52 h-52 mx-auto mt-2 mb-6 rounded-full overflow-hidden border-4 border-navy shadow-2xl img-zoom-container group">
+                            <!-- Founder Image fixed relative path -->
+                            <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/FqkmX43z/Screenshot-2026-09-21-133740.jpg" alt="Screenshot 2026 09 21 133740" border="0"></a>
+
+                                 alt="Monzur Rohoman - Founder & CEO" 
+                                 class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-500">
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-navy tracking-tight">MONZUR ROHOMAN</h3>
+                        <p class="text-xs font-bold text-red-600 uppercase tracking-widest mt-1">Founder & Managing Director</p>
+                        
+                        <blockquote class="text-xs text-gray-600 mt-4 px-3 italic leading-relaxed bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                            "Dedicated to delivering the highest precision, reliability, and engineering standards for commercial kitchen setup & maintenance across Dubai and the UAE."
+                        </blockquote>
+
+                        <div class="mt-6 pt-5 border-t border-gray-200/80 flex justify-center gap-3 text-xs">
+                            <a href="mailto:monzur.rohoman@gmail.com" class="bg-navy text-white px-4 py-2.5 rounded-xl font-bold hover:bg-red-600 transition flex items-center gap-2 shadow">
+                                <i class="fa-regular fa-envelope text-sm"></i> Email Founder
+                            </a>
+                            <a href="https://wa.me/971551031844" target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-4 py-2.5 rounded-xl font-bold hover:bg-green-700 transition flex items-center gap-2 shadow">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Chat Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Info -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-red-600 font-extrabold uppercase text-xs tracking-widest bg-red-50 px-3 py-1 rounded-md">ABOUT OUR COMPANY</span>
+                        <h2 class="text-3xl sm:text-4xl font-black text-navy mt-3 leading-snug">
+                            Welcome to Monzur Rohoman Technical Services
+                        </h2>
+                    </div>
+
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        At <strong class="text-navy">Monzur Rohoman Technical Services</strong>, we specialize in providing high-quality commercial kitchen equipment, maintenance services, and custom solutions. Whether it's dishwashers, convection ovens, deep fryers, chillers & freezers, or cold room installations and maintenance, we ensure your kitchen runs smoothly. We also offer a wide range of commercial equipment spare parts and stainless steel fabrications, designed to meet the unique needs of your business. Our commitment is to deliver exceptional service, reliability, and performance every step of the way.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        We supply a wide range of catering equipment tailored to suit all operational scale requirements and budgets. From specialized kitchen machinery tools to full-scale commercial cooking suites, we offer complete custom design, layout execution, and preventive maintenance agreements.
+                    </p>
+
+                    <div class="bg-navy text-white p-6 rounded-2xl shadow-xl border-l-4 border-red-600 relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-white/5 text-8xl font-black select-none pointer-events-none">
+                            MR
+                        </div>
+                        <h4 class="font-bold text-sm text-red-400 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye"></i> Our Strategy & Core Values
+                        </h4>
+                        <p class="text-xs md:text-sm text-gray-300 mt-2 leading-relaxed">
+                            We are defined by absolute precision in execution, innovation in layout design, and uncompromised dedication to client satisfaction. Our certified technicians deliver 24/7 rapid response, emergency troubleshooting, and reliable maintenance.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-gray-100">
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 text-center">
+                            <span class="text-2xl sm:text-3xl font-black text-red-600 block">15+</span>
+                            <span class="text-[11px] text-gray-600 font-bold uppercase mt-1 block">Years Experience</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 text-center">
+                            <span class="text-2xl sm:text-3xl font-black text-navy block">100+</span>
+                            <span class="text-[11px] text-gray-600 font-bold uppercase mt-1 block">Projects Completed</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 text-center">
+                            <span class="text-2xl sm:text-3xl font-black text-red-600 block">2+</span>
+                            <span class="text-[11px] text-gray-600 font-bold uppercase mt-1 block">UAE Branches</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 text-center">
+                            <span class="text-2xl sm:text-3xl font-black text-navy block">99%+</span>
+                            <span class="text-[11px] text-gray-600 font-bold uppercase mt-1 block">Satisfied Clients</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. OUR SERVICES GRID (WITH HOVER ZOOM & POPUP MODAL) -->
+    <section id="services" class="py-20 bg-gray-100/80">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-600 font-extrabold uppercase tracking-widest text-xs bg-red-100 px-3 py-1 rounded-md">OUR EXPERTISE</span>
+                <h2 class="text-3xl md:text-4xl font-black text-navy mt-3 tracking-tight">What We Do Best</h2>
+                <p class="text-gray-600 text-sm mt-3">Comprehensive commercial kitchen engineering, refrigeration, fabrication, and maintenance services across Dubai.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 flex flex-col border border-gray-200/80 group">
+                    <div class="img-zoom-container h-52 relative">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Commercial Kitchen Equipment" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold uppercase px-3 py-1 rounded-md shadow">Supply & Setup</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-lg text-navy group-hover:text-red-600 transition">Commercial Kitchen Equipment Supply</h3>
+                            <p class="text-gray-600 text-xs md:text-sm mt-3 leading-relaxed">High-grade commercial dishwashers, heavy convection ovens, deep fryers, industrial chillers, and freezers.</p>
+                        </div>
+                        <button onclick="openModal('Commercial Kitchen Equipment Supply', 'Monzur Rohoman Technical Services provides top-of-the-line kitchen equipment including industrial dishwashers, heavy-duty ovens, commercial fryers, and custom cooking suites for restaurants and hotels across Dubai and the UAE. We manage supply, testing, and installation.')" class="mt-6 w-full text-xs font-bold text-white bg-navy py-3 rounded-xl hover:bg-red-600 transition duration-200 text-center uppercase tracking-wider flex items-center justify-center gap-2 shadow">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 flex flex-col border border-gray-200/80 group">
+                    <div class="img-zoom-container h-52 relative">
+                        <img src="https://www.techtimia.com/wp-content/uploads/2025/01/COLD-ROOM-SERVICE-AND-REPAIR-TECHTIMIA-2024.png" alt="Cold Room Installation" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold uppercase px-3 py-1 rounded-md shadow">Refrigeration</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-lg text-navy group-hover:text-red-600 transition">Cold Room Installation</h3>
+                            <p class="text-gray-600 text-xs md:text-sm mt-3 leading-relaxed">Turnkey cold room design, heavy chiller setups, insulation, gas refilling, and compressor maintenance.</p>
+                        </div>
+                        <button onclick="openModal('Cold Room Installation', 'We specialize in turnkey cold room design, walk-in freezer installation, compressor maintenance, gas leak repair, and digital temperature calibration for food processing plants, supermarkets, and hotels.')" class="mt-6 w-full text-xs font-bold text-white bg-navy py-3 rounded-xl hover:bg-red-600 transition duration-200 text-center uppercase tracking-wider flex items-center justify-center gap-2 shadow">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 flex flex-col border border-gray-200/80 group">
+                    <div class="img-zoom-container h-52 relative">
+                        <img src="https://www.andersonplumbingheatingandair.com/wp-content/uploads/2025/08/AC-Tune-Up-George-Newkirk-SELECT-3091.webp" alt="Maintenance & Emergency Repair" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-md shadow">24/7 Support</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-lg text-navy group-hover:text-red-600 transition">Maintenance & Emergency Repair</h3>
+                            <p class="text-gray-600 text-xs md:text-sm mt-3 leading-relaxed">24/7 fast-response emergency repair services and preventative annual maintenance contracts (AMC).</p>
+                        </div>
+                        <button onclick="openModal('Maintenance & Repair Services', 'Fast troubleshooting and certified technical repairs for all commercial kitchen machinery, electrical systems, heating elements, thermostats, and cooling units across the UAE with original spare parts.')" class="mt-6 w-full text-xs font-bold text-white bg-navy py-3 rounded-xl hover:bg-red-600 transition duration-200 text-center uppercase tracking-wider flex items-center justify-center gap-2 shadow">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 flex flex-col border border-gray-200/80 group">
+                    <div class="img-zoom-container h-52 relative">
+                        <img src="https://images.jdmagicbox.com/quickquotes/images_main/stainless-steel-modular-kitchen-2229921210-o79wzsxx.jpg" alt="Stainless Steel Fabrication" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold uppercase px-3 py-1 rounded-md shadow">Custom SS Works</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-lg text-navy group-hover:text-red-600 transition">Stainless Steel Fabrication</h3>
+                            <p class="text-gray-600 text-xs md:text-sm mt-3 leading-relaxed">Bespoke stainless steel countertops, heavy sinks, exhaust hoods, shelving, and custom kitchen cabinets.</p>
+                        </div>
+                        <button onclick="openModal('Stainless Steel Fabrication', 'High-grade 304/316 stainless steel fabrication custom-crafted to exact kitchen dimensions for hotel kitchens, catering hubs, bakeries, and luxury villas.')" class="mt-6 w-full text-xs font-bold text-white bg-navy py-3 rounded-xl hover:bg-red-600 transition duration-200 text-center uppercase tracking-wider flex items-center justify-center gap-2 shadow">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 flex flex-col border border-gray-200/80 group">
+                    <div class="img-zoom-container h-52 relative">
+                        <img src="https://cass-uk.com/wp-content/uploads/2022/12/0009_CASS018-1.jpg" alt="Commercial Deep Cleaning Services" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold uppercase px-3 py-1 rounded-md shadow">Hygiene & Care</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-lg text-navy group-hover:text-red-600 transition">Commercial Deep Cleaning Services</h3>
+                            <p class="text-gray-600 text-xs md:text-sm mt-3 leading-relaxed">Deep cleaning solutions for commercial kitchens, duct systems, exhaust hoods, and commercial premises.</p>
+                        </div>
+                        <button onclick="openModal('Commercial Deep Cleaning Services', 'Thorough commercial kitchen duct cleaning, hood degreasing, sanitization, and compliance maintenance ensuring full municipal safety and hygiene standard adherence.')" class="mt-6 w-full text-xs font-bold text-white bg-navy py-3 rounded-xl hover:bg-red-600 transition duration-200 text-center uppercase tracking-wider flex items-center justify-center gap-2 shadow">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 flex flex-col border border-gray-200/80 group">
+                    <div class="img-zoom-container h-52 relative">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="MEP & Gas Pipeline Engineering" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold uppercase px-3 py-1 rounded-md shadow">MEP Support</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-lg text-navy group-hover:text-red-600 transition">MEP & Gas Pipeline Engineering</h3>
+                            <p class="text-gray-600 text-xs md:text-sm mt-3 leading-relaxed">Mechanical, electrical, plumbing layout execution, LPG gas piping, and Dubai Municipality approval documentation.</p>
+                        </div>
+                        <button onclick="openModal('MEP & Gas Pipeline Engineering', 'Comprehensive MEP design and safety execution for commercial installations including certified gas leak detection, automated shutoff valves, and authority approvals.')" class="mt-6 w-full text-xs font-bold text-white bg-navy py-3 rounded-xl hover:bg-red-600 transition duration-200 text-center uppercase tracking-wider flex items-center justify-center gap-2 shadow">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRODUCTS & SPARE PARTS SECTION -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-600 font-extrabold uppercase tracking-widest text-xs bg-red-50 px-3 py-1 rounded-md">PARTS & EQUIPMENT</span>
+                <h2 class="text-3xl md:text-4xl font-black text-navy mt-3 tracking-tight">Products & Genuine Spare Parts</h2>
+                <p class="text-gray-600 text-sm mt-3">We supply genuine OEM spare parts and top-brand equipment for all commercial kitchen setups.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 text-center hover:border-red-500 transition shadow-sm">
+                    <i class="fa-solid fa-temperature-arrow-down text-3xl text-red-600 mb-3"></i>
+                    <h4 class="font-bold text-navy text-base">Refrigeration Parts</h4>
+                    <p class="text-xs text-gray-500 mt-1">Compressors, Gas, Thermostats</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 text-center hover:border-red-500 transition shadow-sm">
+                    <i class="fa-solid fa-fire-burner text-3xl text-red-600 mb-3"></i>
+                    <h4 class="font-bold text-navy text-base">Oven & Fryer Spares</h4>
+                    <p class="text-xs text-gray-500 mt-1">Heating Elements, Valves, Motors</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 text-center hover:border-red-500 transition shadow-sm">
+                    <i class="fa-solid fa-sink text-3xl text-red-600 mb-3"></i>
+                    <h4 class="font-bold text-navy text-base">Stainless Steel Ware</h4>
+                    <p class="text-xs text-gray-500 mt-1">Sinks, Work Tables, Racks</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-200 text-center hover:border-red-500 transition shadow-sm">
+                    <i class="fa-solid fa-gears text-3xl text-red-600 mb-3"></i>
+                    <h4 class="font-bold text-navy text-base">Dishwasher Spares</h4>
+                    <p class="text-xs text-gray-500 mt-1">Pumps, Filters, Rinse Injectors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. VISITING CARD & CONTACT SECTION -->
+    <section id="contact-card" class="py-20 bg-navy text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-red-500 font-extrabold uppercase tracking-widest text-xs bg-navy-light px-3 py-1 rounded-md border border-gray-800">GET IN TOUCH</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">Direct Contact & Support</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed">Need urgent emergency repair, equipment quote, or customized stainless steel fabrication? Reach out to us directly anytime.</p>
+                    
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Main Office</h5>
+                                <p class="text-xs text-gray-400 mt-0.5">Deira, Dubai, United Arab Emirates</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Phone Lines</h5>
+                                <p class="text-xs text-gray-400 mt-0.5">+971 55 103 1844 / +971 56 825 9776</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center font-bold shrink-0">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white text-sm">Email Inquiry</h5>
+                                <p class="text-xs text-gray-400 mt-0.5">monzur.rohoman@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="bg-gradient-to-br from-navy-light to-navy border border-gray-700/80 p-8 rounded-3xl shadow-2xl w-full max-w-lg relative overflow-hidden">
+                        <div class="flex justify-between items-start border-b border-gray-700/80 pb-6 mb-6">
+                            <div>
+                                <h3 class="font-black text-xl text-white">MONZUR ROHOMAN</h3>
+                                <p class="text-xs text-red-500 font-bold uppercase tracking-wider mt-1">Technical Services Dubai</p>
+                            </div>
+                            <div class="bg-white text-navy font-black text-sm px-3 py-1.5 rounded-lg border-2 border-red-600">
+                                MR
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-gray-300 leading-relaxed mb-6">
+                            Commercial Kitchen Equipment Supply, Installation, Cold Room Maintenance, Stainless Steel Fabrication & MEP Services.
+                        </p>
+
+                        <div class="space-y-2 text-xs text-gray-300 border-t border-gray-700/80 pt-4">
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-red-500"></i> +971 55 103 1844</p>
+                            <p class="flex items-center gap-2"><i class="fa-regular fa-envelope text-red-500"></i> monzur.rohoman@gmail.com</p>
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-red-500"></i> Deira, Dubai, UAE</p>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <a href="https://wa.me/971551031844" target="_blank" class="w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Us
+                            </a>
+                            <a href="tel:+971551031844" class="w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-phone text-sm"></i> Call Directly
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-navy-dark text-gray-400 text-xs py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 MONZUR ROHOMAN TECHNICAL SERVICES. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 9. GLOBAL FLOATING WHATSAPP BUTTON (Visible on all pages) -->
+    <a href="https://wa.me/971551031844" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group"
+       aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-navy text-white text-xs font-semibold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md pointer-events-none border border-gray-700">
+            Chat on WhatsApp
+        </span>
+    </a>
+
+    <!-- 10. MODAL POPUP FOR SERVICES -->
+    <div id="service-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-navy text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modal-title" class="text-xl font-black text-navy mb-4"></h3>
+            <p id="modal-body" class="text-sm text-gray-600 leading-relaxed mb-6"></p>
+            <div class="flex justify-end gap-3">
+                <a href="https://wa.me/971551031844" target="_blank" class="bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-xs hover:bg-green-700 transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> Inquire via WhatsApp
+                </a>
+                <button onclick="closeModal()" class="bg-gray-200 text-navy px-5 py-2.5 rounded-xl font-bold text-xs hover:bg-gray-300 transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS & Custom Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper Hero Slider
+        const swiper = new Swiper('.heroSwiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Mobile Menu Drawer Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.replace('fa-xmark', 'fa-bars');
+            } else {
+                menuIcon.classList.replace('fa-bars', 'fa-xmark');
+            }
+        });
+
+        // Close Mobile Menu on Link Click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+
+        // Modal Functions
+        function openModal(title, description) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-body').innerText = description;
+            document.getElementById('service-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('service-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
